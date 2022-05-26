@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "545636923617",
+    "project_id": "refugioapp-d0e9d",
+    "storage_bucket": "refugioapp-d0e9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545636923617:android:7710cd5744d7d94a779fa0",
+        "android_client_info": {
+          "package_name": "com.example.refuapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545636923617-rd7svoers9ndvblfr75mti89nu97cbv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNMjRG-fvpvdFWyjWbHSYUl6VDbgpFpxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545636923617-rd7svoers9ndvblfr75mti89nu97cbv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
