@@ -10,19 +10,24 @@
         android:id="@+id/ivLogo"
         android:layout_width="202dp"
         android:layout_height="232dp"
-        app:srcCompat="@drawable/mascota"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="55dp" />
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mascota" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/txtEmailInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:hint="Email"
+        android:hint="@string/email"
+        app:boxStrokeColor="@color/teal_700"
+        app:hintTextColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivLogo">
@@ -30,22 +35,24 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtEmailInput"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/txtPasswordInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:hint="Contraseña"
+        android:hint="@string/contrasenia"
+        app:boxStrokeColor="@color/teal_700"
+        app:hintTextColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtPasswordInput"
@@ -58,25 +65,22 @@
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Ingresar"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/teal_700"
+        android:text="@string/ingresar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGoToSignin" />
 
-    <TextView
+    <Button
         android:id="@+id/btnGoToSignin"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="Todavía no tengo cuenta, quiero registrarme"
-        android:textAllCaps="false"
-        android:textSize="15dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/todavia_no_tengo_cuenta_quiero_registrarme"
         android:textColor="@color/teal_700"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPasswordInputLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/RefuApp/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/RefuAppGit/RefuApp/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/RefuAppGit/RefuApp/app/src/main/res/layout/activity_signin.xml" value="0.25" />
       </map>
     </option>
   </component>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RefuApp">
         <activity
+            android:name=".ui.view.SigninActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.view.LoginActivity"
             android:exported="true">
             <intent-filter>

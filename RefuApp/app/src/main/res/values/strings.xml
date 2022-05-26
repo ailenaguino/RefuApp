@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">RefuApp</string>
+    <string name="email">Email</string>
+    <string name="contrasenia">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="todavia_no_tengo_cuenta_quiero_registrarme">Todavía no tengo cuenta, quiero registrarme</string>
+    <string name="escriba_de_nuevo_la_constrasenia">Escriba de nuevo la constraseña</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="soy_un_refugio">Soy un refugio</string>
+    <string name="registrarme">Registrarme</string>
 </resources>
