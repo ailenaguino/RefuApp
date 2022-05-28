@@ -3,6 +3,7 @@ package com.example.refuapp.ui.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import com.example.refuapp.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -26,6 +27,29 @@ class LoginActivity : AppCompatActivity() {
     private fun setListeners(){
         binding.btnGoToSignin.setOnClickListener {
             goToSignin()
+        }
+        binding.btnLogin.setOnClickListener {
+            loginUser()
+        }
+    }
+
+    private fun loginUser() {
+        val email = binding.txtEmailInput.text.toString()
+        val password = binding.txtPasswordInput.text.toString()
+
+        if(email.isNotEmpty() && password.isNotEmpty()) {
+            binding.txtPasswordInputLayout.error = null
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        Log.i("FirebaseAuth", "Se logueó el usuario")
+                    } else {
+                        binding.txtPasswordInputLayout.error = "Email y/o contraseña no válidos"
+                        Log.i("FirebaseAuth", "No se pudo loguear el usuario", task.exception)
+                    }
+                }
+        }else{
+            binding.txtPasswordInputLayout.error = "Complete todos los campos"
         }
     }
 
