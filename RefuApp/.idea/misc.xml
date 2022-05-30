@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/RefuApp/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/RefuAppGit/RefuApp/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/RefuAppGit/RefuApp/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/RefuAppGit/RefuApp/app/src/main/res/layout/activity_signin.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/RefuAppGit/RefuApp/app/src/main/res/layout/fragment_home.xml" value="0.2552083333333333" />
+        <entry key="..\:/AndroidStudioProjects/RefuAppGit/RefuApp/app/src/main/res/layout/profile_fragment.xml" value="0.2552083333333333" />
+        <entry key="..\:/AndroidStudioProjects/RefuAppGit/RefuApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2552083333333333" />
       </map>
     </option>
   </component>

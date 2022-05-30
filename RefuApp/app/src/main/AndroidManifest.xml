@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RefuApp">
         <activity
+            android:name=".ui.fragment.BottomNavigationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_navigation" />
+        <activity
             android:name=".ui.view.SigninActivity"
             android:exported="false" />
         <activity

@@ -8,4 +8,9 @@
     <string name="nombre_de_usuario">Nombre de usuario</string>
     <string name="soy_un_refugio">Soy un refugio</string>
     <string name="registrarme">Registrarme</string>
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="title_profile">Profile</string>
 </resources>

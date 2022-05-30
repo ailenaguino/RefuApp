@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import com.example.refuapp.databinding.ActivityLoginBinding
+import com.example.refuapp.ui.fragment.BottomNavigationActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -43,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         Log.i("FirebaseAuth", "Se logueó el usuario")
+                        goToHome()
                     } else {
                         binding.txtPasswordInputLayout.error = "Email y/o contraseña no válidos"
                         Log.i("FirebaseAuth", "No se pudo loguear el usuario", task.exception)
@@ -55,6 +57,11 @@ class LoginActivity : AppCompatActivity() {
 
     private fun goToSignin(){
         val intent = Intent(this, SigninActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToHome(){
+        val intent = Intent(this, BottomNavigationActivity::class.java)
         startActivity(intent)
     }
 }

@@ -35,6 +35,8 @@ class SigninActivity : AppCompatActivity() {
                 binding.txtPasswordSigninInput1.text.toString() != "" &&
                     binding.txtPasswordSigninInput2.text.toString() != ""){
                 createUserWithEmailAndPassword()
+            }else{
+                binding.txtEmailSigninInputLayout.error = "Por favor completar todos los campos"
             }
         }
     }
@@ -63,7 +65,7 @@ class SigninActivity : AppCompatActivity() {
             binding.txtPasswordSigninInputLayout2.error = "Las contraseñas no coinciden"
             false
         }else if(binding.txtPasswordSigninInput1.text.toString().length < 6){
-            binding.txtPasswordSigninInputLayout2.error = "La contraseña debe tener al menos 6 caracteres"
+            binding.txtPasswordSigninInputLayout1.error = "La contraseña debe tener al menos 6 caracteres"
             false
         } else if(!passwordRegex()){
             binding.txtPasswordSigninInputLayout1.error =
