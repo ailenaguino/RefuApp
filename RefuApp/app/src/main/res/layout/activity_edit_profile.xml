@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.EditProfileActivity">
+
+    <ImageView
+        android:id="@+id/ivEditProfilePicture"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnEditProfilePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/cambiar_foto_de_perfil"
+        app:layout_constraintEnd_toEndOf="@+id/ivEditProfilePicture"
+        app:layout_constraintStart_toStartOf="@+id/ivEditProfilePicture"
+        app:layout_constraintTop_toBottomOf="@+id/ivEditProfilePicture" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEditNameInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:boxStrokeColor="@color/teal_700"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditNameLabel">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEditNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEditBiographyInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:boxStrokeColor="@color/teal_700"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditBiographyLabel">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEditBiographyInput"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:padding="15dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtEditNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16dp"
+        android:text="@string/nombre"
+        app:layout_constraintStart_toStartOf="@+id/txtEditNameInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditProfilePicture" />
+
+    <TextView
+        android:id="@+id/txtEditBiographyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        android:text="@string/biograf_a"
+        app:layout_constraintStart_toStartOf="@+id/txtEditBiographyInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditNameInputLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
