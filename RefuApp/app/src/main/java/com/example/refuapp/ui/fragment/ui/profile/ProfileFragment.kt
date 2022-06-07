@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import com.example.refuapp.databinding.ProfileFragmentBinding
 import com.example.refuapp.ui.view.EditProfileActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -38,6 +39,7 @@ class ProfileFragment : Fragment() {
     ): View? {
 
         auth = Firebase.auth
+
         getUserData()
 
         _binding = ProfileFragmentBinding.inflate(inflater, container, false)

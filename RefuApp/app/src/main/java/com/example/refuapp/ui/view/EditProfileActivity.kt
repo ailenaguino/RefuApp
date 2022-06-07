@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.refuapp.databinding.ActivityEditProfileBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -133,8 +134,8 @@ class EditProfileActivity : AppCompatActivity() {
                 val biography = documentSnapshot.data?.get("biography")
                 val profilePicture = documentSnapshot.data?.get("profilePicture")
 
-                binding.txtEditNameInput.hint = name.toString()
-                binding.txtEditBiographyInput.hint = biography.toString()
+                binding.txtEditNameInput.setText(name.toString(), TextView.BufferType.EDITABLE)
+                binding.txtEditBiographyInput.setText(biography.toString(), TextView.BufferType.EDITABLE)
                 Picasso.get().load(profilePicture.toString()).into(binding.ivEditProfilePicture)
             }.addOnFailureListener {
                 Log.i("Firestore", "Falló la obtencion de los datos del usuario")

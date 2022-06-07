@@ -15,14 +15,14 @@
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        android:src="@drawable/no_photo" />
 
     <TextView
         android:id="@+id/txtProfileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        tools:text = "Name"
+        android:text="Cargando..."
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/ivProfilePicture"
         app:layout_constraintTop_toTopOf="@+id/ivProfilePicture" />
@@ -77,4 +77,5 @@
         app:layout_constraintEnd_toEndOf="@+id/ivProfilePicture"
         app:layout_constraintStart_toStartOf="@+id/ivProfilePicture"
         app:layout_constraintTop_toBottomOf="@+id/ivProfilePicture" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
