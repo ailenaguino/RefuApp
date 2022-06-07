@@ -16,4 +16,5 @@
     <string name="nombre">Nombre</string>
     <string name="biograf_a">Biografía</string>
     <string name="cambiar_foto_de_perfil">Cambiar foto de perfil</string>
+    <string name="aceptar_cambios">Aceptar cambios</string>
 </resources>
