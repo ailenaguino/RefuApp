@@ -17,4 +17,8 @@
     <string name="biograf_a">Biografía</string>
     <string name="cambiar_foto_de_perfil">Cambiar foto de perfil</string>
     <string name="aceptar_cambios">Aceptar cambios</string>
+    <string name="titulo">Titulo</string>
+    <string name="publicar_post">Publicar post</string>
+    <string name="agregar_imagen">Agregar imagen</string>
+    <string name="cuerpo">Cuerpo</string>
 </resources>

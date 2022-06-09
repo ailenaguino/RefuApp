@@ -1,14 +1,19 @@
 package com.example.refuapp.ui.view
 
+import android.Manifest
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.example.refuapp.databinding.ActivityEditProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -45,7 +50,7 @@ class EditProfileActivity : AppCompatActivity() {
             changeUserData()
         }
         binding.btnEditProfilePicture.setOnClickListener {
-            selectImage()
+            checkPermissions()
         }
     }
 
@@ -99,6 +104,7 @@ class EditProfileActivity : AppCompatActivity() {
                         uploadImage()
                     }else{Log.i("Image Uri", "Image uri es null")}
                 }
+            finish()
         }else{
             binding.txtEditNameInputLayout.error = "Por favor ingresar un nombre"
         }
@@ -137,8 +143,44 @@ class EditProfileActivity : AppCompatActivity() {
                 binding.txtEditNameInput.setText(name.toString(), TextView.BufferType.EDITABLE)
                 binding.txtEditBiographyInput.setText(biography.toString(), TextView.BufferType.EDITABLE)
                 Picasso.get().load(profilePicture.toString()).into(binding.ivEditProfilePicture)
+
             }.addOnFailureListener {
                 Log.i("Firestore", "Falló la obtencion de los datos del usuario")
             }
+    }
+
+    private fun checkPermissions(){
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) !=
+            PackageManager.PERMISSION_GRANTED){
+            requestGalleryPermission()
+        }else{
+            selectImage()
+        }
+    }
+
+    private fun requestGalleryPermission() {
+        if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
+            //El usuario ya rechazó el permiso
+        }else{
+            //el usuario no los rechazo todavia, se piden los permisos
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+        //Codigo de verificacion, el siguiente metodo va a tener un listener que escucha cada vez que se acepte un permiso
+            777)
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if(requestCode == 777){
+            if(grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                selectImage()
+            }else{
+                Toast.makeText(this, "Permisos rechazados", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 }

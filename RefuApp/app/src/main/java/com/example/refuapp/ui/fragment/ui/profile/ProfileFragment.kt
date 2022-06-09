@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import com.example.refuapp.databinding.ProfileFragmentBinding
+import com.example.refuapp.ui.view.CreatePostActivity
 import com.example.refuapp.ui.view.EditProfileActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -59,6 +60,14 @@ class ProfileFragment : Fragment() {
         binding.icProfileEdit.setOnClickListener{
             goToEditProfile()
         }
+        binding.fabCreatePost.setOnClickListener{
+            goToCreatePost()
+        }
+    }
+
+    private fun goToCreatePost() {
+        val intent = Intent(activity, CreatePostActivity::class.java)
+        startActivity(intent)
     }
 
     private fun goToEditProfile() {
