@@ -14,7 +14,7 @@
     tools:context=".ui.view.CreatePostActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivCreatePostImage"
         android:layout_width="240dp"
         android:layout_height="240dp"
         android:layout_marginTop="24dp"
@@ -24,14 +24,14 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnAddPostImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:text="@string/agregar_imagen"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCreatePostImage" />
 
 
     <TextView
@@ -42,7 +42,7 @@
         android:text="@string/titulo"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="@+id/txtEditPostTitleInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAddPostImage" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtEditPostTitleInputLayout"
@@ -110,6 +110,16 @@
         android:text="@string/publicar_post"
         app:layout_constraintEnd_toEndOf="@+id/txtEditPostBodyInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/txtEditPostBodyInputLayout" />
+
+    <CheckBox
+        android:id="@+id/cbIsSensitiveContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/es_contenido_sensible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCreatePostImage" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
